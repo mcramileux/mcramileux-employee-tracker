@@ -41,6 +41,7 @@
 * Node.js
 * MySQL2 package
 * Inquirer package
+* Screencastify
 
 ## License
 This project is under [MIT](https://choosealicense.com/licenses/mit/) license.

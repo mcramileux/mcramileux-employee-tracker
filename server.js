@@ -24,3 +24,12 @@ const db = mysql.createConnection(
   },
   console.log(`TO EDIT`)
 );
+
+// What would you like to do?
+// View All Employees
+// Add Employee
+// View All Roles
+// Add Role
+// View All Departments
+// Add Department
+// Quit
