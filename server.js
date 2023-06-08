@@ -186,7 +186,7 @@
       type: 'input',
       name: 'department_id',
       message: 'Please select the department ID for this role.',
-      choices: [     ],
+      choices: [     ], //ask Jacob
     },
   ])
   .then((answers) => {
@@ -194,7 +194,7 @@
     [answers.title, answers.salary, answers.department_id], 
     function (err, res) {
       if (err) throw err;
-      console.log(chalk.magentaBright(`\n ${answer.first_name} ${answer.last_name} successfully added to database! \n`));
+      console.log(chalk.magentaBright(`\n ${answer.title} successfully added to database! \n`));
       promptQuestions();
       }
     );
@@ -223,14 +223,14 @@
           type: 'input',
           name: 'manager_id',
           message: 'Select the manager of the employee',
-          choices: [    ],
+          choices: [    ], //ask Jacob
         },
       ])
       .then((answers) => {
         db.query ('INSERT INTO department (name) VALUES (?)', [answers.name],
         function (err, res) {
           if (err) throw err;
-          console.log(chalk.magentaBright(`\n ${ans.newDept} successfully added to database! \n`));
+          console.log(chalk.magentaBright(`\n ${answer.first_name} ${answer.last_name} successfully added to database! \n`));
           promptQuestions();
         })
       });
