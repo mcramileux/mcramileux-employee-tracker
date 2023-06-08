@@ -53,7 +53,7 @@ This project is under [MIT](https://choosealicense.com/licenses/mit/) license.
 - [Inquirer.js](https://www.npmjs.com/package/inquirer/v/8.2.4)
 - [Node MySQL 2](https://www.npmjs.com/package/mysql2)
 - [The JavaScript Switch Statement](https://www.w3schools.com/js/js_switch.asp)
-- 
+- [JavaScript Async](https://www.w3schools.com/js/js_async.asp)
 
 ## Acknowledgements and Credits
 - Jacob Carver - weekly boot camp tutor

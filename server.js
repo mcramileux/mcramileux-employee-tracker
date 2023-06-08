@@ -5,6 +5,7 @@ const express = require('express');
 const inquirer = require('inquirer');
 // Import and require mysql2
 const mysql = require('mysql2');
+require('dotenv').config()
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -26,7 +27,7 @@ const connection = mysql.createConnection(
   console.log(`Connected to the employees_db database.`)
 );
 
-// Below are the array of questions
+// Prompt questions for menu
 function promptQuestions() {
   inquirer
     .prompt([
@@ -56,7 +57,7 @@ function promptQuestions() {
       }
     ])
     .then((answers) => {
-      // Add the choices above here:
+      // Use switch syntax function
       switch (answers.usersChoice) {
         case 'View All Departments':
           viewAllDepts();
@@ -105,6 +106,17 @@ function promptQuestions() {
       }
     });
 }
+
+//--- VIEW MENU --- //
+
+// --- FOLLOW THIS PSEUDO-CODE --- //
+// async function myFunction() {
+//   return "Hello";
+// }
+// myFunction().then(
+//   function(value) {myDisplayer(value);},
+//   function(error) {myDisplayer(error);}
+// );
 
 // You might also want to make your queries asynchronous. MySQL2 exposes a .promise() function on Connections to upgrade an existing non-Promise connection to use Promises. 
 // To learn more and make your queries asynchronous, refer to the npm documentation on MySQL2.
