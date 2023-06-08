@@ -2,6 +2,7 @@
 
 // Import the dependencies
 const express = require('express');
+const inquirer = require('inquirer');
 // Import and require mysql2
 const mysql = require('mysql2');
 
@@ -13,7 +14,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 // Connect to database
-const db = mysql.createConnection(
+const connection = mysql.createConnection(
   {
     host: 'localhost',
     // MySQL username,
@@ -42,13 +43,13 @@ function promptQuestions() {
           'Add Employee',
           // Bonus --if have time to add
           'Update Employee Role',
-          'Update employee managers',
-          'View employees by manager',
-          'View employees by department',
+          'Update employee Managers',
+          'View Employees by Manager',
+          'View Employees by Department',
           'Delete Departments',
           'Delete Role',
           'Delete Employee',
-          'View the combined salaries of all employees in that department',
+          'View Combined Salaries of All Employees by Department',
           // End of Bonus
           'Quit',
         ],
@@ -56,30 +57,53 @@ function promptQuestions() {
     ])
     .then((answers) => {
       // Add the choices above here:
-      switch (answers.menu) {
-        case 0:
-          day = "Sunday";
+      switch (answers.usersChoice) {
+        case 'View All Departments':
+          viewAllDepts();
           break;
-        case 1:
-          day = "Monday";
+        case 'View All Roles':
+          viewAllRoles();
           break;
-        case 2:
-           day = "Tuesday";
+        case 'View All Employees':
+           viewAllEmployees();
           break;
-        case 3:
-          day = "Wednesday";
+        case 'Add Department':
+          addDept();
           break;
-        case 4:
-          day = "Thursday";
+        case 'Add Role':
+          addRole();
           break;
-        case 5:
-          day = "Friday";
+        case 'Add Employee':
+          addEmployee();
           break;
-        case 6:
-          day = "Saturday";
+        case 'Update Employee Role':
+          updateEmployeeRole();
+          break;
+        case 'Update Employee Managers':
+          updateEmployeeManagers();
+          break;
+        case 'View Employees by Manager':
+          viewEmployeesByManager();
+        case 'View Employees by Department':
+          viewEmployeesByDept();
+          break;
+        case 'Delete Departments':
+          deleteDepts();
+        case 'Delete Role':
+          deleteRole();
+          break;
+        case 'Delete Employee':
+          deleteEmployee();
+        case 'View Combined Salaries of All Employees by Department':
+          viewCombinedSalariesByDept();
+          break;
+        case 'Quit':
+          quit();
+          break;
+        default: connection.end();
+          break;
       }
-
-    })
+    });
 }
 
 // You might also want to make your queries asynchronous. MySQL2 exposes a .promise() function on Connections to upgrade an existing non-Promise connection to use Promises. 
