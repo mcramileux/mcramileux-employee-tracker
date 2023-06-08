@@ -54,6 +54,7 @@ This project is under [MIT](https://choosealicense.com/licenses/mit/) license.
 - [Node MySQL 2](https://www.npmjs.com/package/mysql2)
 - [The JavaScript Switch Statement](https://www.w3schools.com/js/js_switch.asp)
 - [JavaScript Async](https://www.w3schools.com/js/js_async.asp)
+- [Terminal Styling using Chalk](https://www.npmjs.com/package/chalk/v/4.1.2)
 
 ## Acknowledgements and Credits
 - Jacob Carver - weekly boot camp tutor
