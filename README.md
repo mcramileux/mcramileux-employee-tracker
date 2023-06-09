@@ -55,6 +55,8 @@ This project is under [MIT](https://choosealicense.com/licenses/mit/) license.
 - [The JavaScript Switch Statement](https://www.w3schools.com/js/js_switch.asp)
 - [JavaScript Async](https://www.w3schools.com/js/js_async.asp)
 - [Terminal Styling using Chalk](https://www.npmjs.com/package/chalk/v/4.1.2)
+- [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
+- [Samantha Peterson's SQL challenge Employee Tracker 12](https://github.com/SamanthaPeterson/SQL-challenge-Employee-Tracker-12) for using .promise().
 
 ## Acknowledgements and Credits
 - Jacob Carver - weekly boot camp tutor

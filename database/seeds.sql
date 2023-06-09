@@ -1,6 +1,6 @@
 --- followed the mini-project's solved folder ---
 
-USE employees_db
+USE employees_db;
 
 INSERT INTO department (department_id, department_name)
 VALUES (1, "Management"),
