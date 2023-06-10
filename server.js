@@ -1,19 +1,10 @@
 //Followed the mini-project's solved folder
 
   // Import and install the package dependencies
-  // const express = require('express');
   const inquirer = require('inquirer');
   const mysql = require('mysql2');
   const chalk = require('chalk');
-  // const table = require('console.table');
   require('dotenv').config()
-
-  // const PORT = process.env.PORT || 3001;
-  // const app = express();
-
-  // Express middleware
-  // app.use(express.urlencoded({ extended: false }));
-  // app.use(express.json());
 
   // Connect to MySQL connection
   const connection = mysql.createConnection(
@@ -52,15 +43,7 @@ promptQuestions()
             'Add Employee',
             // Bonus
             'Update Employee Role',
-            // 'Update employee Managers',
-            // 'View Employees by Manager',
-            // 'View Employees by Department',
-            // 'Delete Departments',
-            // 'Delete Role',
-            // 'Delete Employee',
-            // 'View Combined Salaries of All Employees by Department',
-            // End of Bonus
-           'Quit',
+            'Quit',
           ],
        }
       ])
@@ -88,27 +71,6 @@ promptQuestions()
           case 'Update Employee Role':
             updateEmployeeRole();
             break;
-          // case 'Update Employee Managers':
-          //   updateEmployeeManagers();
-          //   break;
-          // case 'View Employees by Manager':
-          //   viewEmployeesByManager();
-          //   break;
-          // case 'View Employees by Department':
-          //   viewEmployeesByDept();
-          //   break;
-          // case 'Delete Departments':
-          //   deleteDepts();
-          //   break;
-          // case 'Delete Role':
-          //   deleteRole();
-          //   break;
-          // case 'Delete Employee':
-          //   deleteEmployee();
-          //   break;
-          // case 'View Combined Salaries of All Employees by Department':
-          //   viewCombinedSalariesByDept();
-          //   break;
           case 'Quit':
             quit();
             break;
@@ -243,18 +205,11 @@ promptQuestions()
           type: 'input',
           name: 'employee_id',
           message: 'Please select the employee ID that you would like to update.',
-          // choices: employee.map((employee) => { // use the map method array
-          //   return { 
-          //     name: `${employee.first_name} ${employee.last_name}`,
-          //     value: employee.id,
-          //   };
-          // }),
         },
         {
           type: 'input',
           name: 'role_id',
           message: 'Please select the new role ID of the employee.',
-          // choices: 'role',
         },
       ])
       .then((answers) => {
@@ -267,191 +222,6 @@ promptQuestions()
         })
       });
     }
-
-//     // Update Employee's Managers
-//   function updateEmployeeManagers() { // use async syntax
-//   inquirer
-//       .prompt ([
-//         {
-//           type: 'input',
-//           name: 'replace_employee',
-//           message: 'Please enter the employee ID of the employee you would like to update.',
-//           choices: employee.map((employee) => ({
-//             name: `${employee.first_name} ${employee.last_name}`,
-//             value: employee.id,
-//           })),
-//         },
-//         {
-//           type: 'list',
-//           name: 'manager_id',
-//           message: 'Please enter the manager to the employee that you would like to update.',
-//           choices: manager.map((manager) => ({
-//             name: `${manager.first_name} ${manager.last_name}`,
-//             value: manager.id,
-//           })),
-//           // ASK JACOB: how to add null
-//           },
-//         ])   
-//       .then((answers) => { //ASK JACOB: why's there a red line
-//         connection.query ('UPDATE employee SET manager_id = ? WHERE id = ?',
-//           [answers.manager_id, answers.employee_id],
-//           (err) => {
-//             if (err) throw err;
-//           console.log(chalk.magentaBright (`\n Employee's manager successfully added to the database! \n`));
-//           promptQuestions();
-//         }
-//       );
-//     });
-// };
-
-// // ---- VIEWING ---- //
-// // View Employees by Manager
-//   function viewEmployeesByManager() { // use async syntax
-//     connection.query('SELECT * FROM employee WHERE role_id IN (SELECT id FROM role WHERE title = "manager")', (err, manager) => {
-//       if (err) throw err;
-
-//   inquirer
-//       .prompt ([
-//         {
-//           type: 'list',
-//           name: 'manager_id',
-//           message: "Please select the employee's manager.",
-//           choices: manager.map((manager) => ({
-//             name: `${manager.first_name} ${manager.last_name}`,
-//             value: manager.id,
-//           })),
-//         },
-//       ])
-//       .then((answers) => {
-//         connection.query ('SELECT employee.id AS'
-       
-//         )}
-//       )}
-//     )}
-
-// // View Employees By Department
-//   function viewEmployeesByDept() { // use async syntax
-//     connection.query('SELECT * FROM department', (err, department) => {
-//       if (err) throw err;
-  
-//   inquirer
-//       .prompt ([
-//         {
-//           type: 'input',
-//           name: 'dept_id',
-//           message: "Please select the employee's department.",
-//           choices: department.map((department) => { // use the map method array
-//             return { 
-//               name: department.department_name, 
-//               value: department.id 
-//             };
-//           }),
-//         },
-//       ])
-//       .then((answers) => {
-//         connection.query ('SELECT FROM employee.id AS'
-
-//         )}
-//       )}
-//     )}
-
-// // ---- DELETING ---- //
-// // Delete Department
-//   function deleteDepts() { // use async syntax
-//     connection.query('SELECT * FROM employee', (err, employee) => {
-//       if (err) throw err;
-
-//   inquirer
-//       .prompt ([
-//         {
-//           type: 'list',
-//           name: 'dept_name',
-//           message: 'Please select the department that you would like to delete.',
-//           choices:  department.map((department) => ({
-//             name: `${department.name}`,
-//             value: department.id,
-//           })),
-//         },
-//       ])
-//       .then((answers) => {
-//         connection.query ('DELETE FROM department'
-
-//       )}
-//     )}
-//   )} 
-
-//   function deleteRole() { // use async syntax
-//     connection.query('SELECT * FROM role', (err, role) => {
-//       if (err) throw err;
-
-//   inquirer
-//       .prompt ([
-//         {
-//           type: 'list',
-//           name: 'role_id',
-//           message: 'Please select the role that you would like to delete.',
-//           choices: role.map((role) => ({
-//             name: `${role.title}`,
-//             value: role.id,
-//           })),
-//         },
-//       ])
-//       .then((answers) => {
-//         connection.query ('DELETE FROM role'
-        
-//         )}
-//       )}
-//     )}
-  
-// // Delete Employee
-//   function deleteEmployee() { // use async syntax
-//     connection.query('SELECT * FROM employee', (err, employees) => {
-//       if (err) throw err;
-  
-//   inquirer
-//       .prompt ([
-//         {
-//           type: 'list',
-//           name: 'employee_name',
-//           message: 'Please select the employee that you would like to delete.',
-//           choices: employee.map((employee) => ({
-//             name: `${employee.first_name} ${employee.last_name}`,
-//             value: employee.id,
-//           })),
-//         },
-//       ])
-//       .then((answers) => {
-//         connection.query ('DELETE FROM employee'
-          
-//         )}
-//       )}
-//     )}
-
-// // ---- COMBINED SALARIES ---- //
-// // View Combined Salaries BY Department
-//   function viewCombinedSalariesByDept() { // use async syntax
-//     connection.query('SELECT * FROM department', (err, departments) => {
-//       if (err) throw err;
-  
-//   inquirer
-//       .prompt ([
-//         {
-//           type: 'list',
-//           name: 'dept_salaries',
-//           message: 'Which department would you like to check the combined salaries of?',
-//           choices: department.map((department) => ({
-//             name: `${department.name}`,
-//             value: department.id,
-//           })),
-//         },
-//       ])
-//       .then((answers) => {
-//         connection.query ('SELECT FROM department.name AS department'
-
-//         )}
-//       )}
-//     )}
-    
 
 // Quit Menu
   function quit() {
