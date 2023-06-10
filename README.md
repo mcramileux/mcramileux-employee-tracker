@@ -55,7 +55,17 @@
 
 
 ## Screenshots 
-- ---- ADD PHOTOS HERE
+- Main menu of the database. Showing here are the options that you wish to do on the following menu.
+  
+    ![database-menu](https://github.com/mcramileux/mcramileux-employee-tracker/assets/122607160/c7b7d1ad-2f64-4333-bbdb-593e6bdbe2ed)
+
+
+- View categories. Showing here are the options of all views menu when choosing the right one.
+    ![view-all-options](https://github.com/mcramileux/mcramileux-employee-tracker/assets/122607160/fd17ff4d-c062-478d-9e31-e852e2dbe889)
+
+- Quit option. Showing here is the option of quit or finishing the task from the menu.
+  
+    ![quit-option](https://github.com/mcramileux/mcramileux-employee-tracker/assets/122607160/f267142e-ff09-4723-b465-a4153ac097f4)
 
 ## Contributions
 * Contributions to this project won't be accepted as this is the reflection of the author's work hence the following questions and answers. Furthermore, forking or creating a pull request is acceptable.
