@@ -332,7 +332,7 @@
 // ---- VIEWING ---- //
 // View Employees by Manager
   function viewEmployeesByManager() { // use async syntax
-    connection.query('SELECT * FROM employee WHERE role_id IN (SELECT id FROM role WHERE title = "Manager")', (err, manager) => {
+    connection.query('SELECT * FROM employee WHERE role_id IN (SELECT id FROM role WHERE title = "manager")', (err, manager) => {
       if (err) throw err;
 
   inquirer
@@ -348,14 +348,11 @@
         },
       ])
       .then((answers) => {
-        connection.query (
-
-        )
-      
-      }
-      )
-    })
-  }
+        connection.query ('SELECT employee.id AS'
+       
+        )}
+      )}
+    )}
 
 // View Employees By Department
   function viewEmployeesByDept() { // use async syntax
@@ -377,11 +374,11 @@
         },
       ])
       .then((answers) => {
-        connection.query (
+        connection.query ('SELECT FROM employee.id AS'
 
         )}
-      )
-  }
+      )}
+    )}
 
 // ---- DELETING ---- //
 // Delete Department
@@ -402,7 +399,7 @@
         },
       ])
       .then((answers) => {
-        connection.query (
+        connection.query ('DELETE FROM department'
 
       )}
     )}
@@ -425,10 +422,10 @@
         },
       ])
       .then((answers) => {
-        connection.query (
-          
-      })
-    )}
+        connection.query ('DELETE FROM role'
+        
+        )}
+      )}
     )}
   
 // Delete Employee
@@ -449,10 +446,12 @@
         },
       ])
       .then((answers) => {
-        connection.query (
+        connection.query ('DELETE FROM employee'
           
         )}
+      )}
     )}
+
 // ---- COMBINED SALARIES ---- //
 // View Combined Salaries BY Department
   function viewCombinedSalariesByDept() { // use async syntax
@@ -472,10 +471,11 @@
         },
       ])
       .then((answers) => {
-        connection.query (
-          
-        )
+        connection.query ('SELECT FROM department.name AS department'
+
+        )}
       )}
+    )}
     
 
 // Quit Menu

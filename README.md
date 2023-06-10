@@ -4,18 +4,19 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
 ## Description
+- This is a command-line application built from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
 
 ## Table of Contents
 - [McRAMILEUX's Employee Tracker](#mcramileuxs-employee-tracker)
   - [Description](#description)
   - [Table of Contents](#table-of-contents)
   - [Technologies Used](#technologies-used)
-  - [License](#license)
   - [Installation](#installation)
   - [Links](#links)
   - [Usage](#usage)
   - [Screenshots](#screenshots)
   - [Contributions](#contributions)
+  - [License](#license)
   - [Questions](#questions)
   - [Reference](#reference)
   - [Acknowledgements and Credits](#acknowledgements-and-credits)
@@ -28,13 +29,18 @@
 * Inquirer package
 * Screencastify
 
-## License
-This project is under [MIT](https://choosealicense.com/licenses/mit/) license.
-
 ## Installation
+- The following are the installation packages needed to start the company's database to work before anything else:
+  - npm init -y
+  - npm install && npm start
+  - node server.js
+  - npm i inquirer@8.2.4
+  - npm i mysql2
+  - npm i chalk@4.1.2
+  - npm i dotenv
 
 ## Links
-- Github Repository: ----ADD LINK HERE
+- Github Repository: https://github.com/mcramileux/mcramileux-employee-tracker
 - Google Drive Video: ---- ADD LINK HERE
 
 ## Usage
@@ -45,6 +51,8 @@ This project is under [MIT](https://choosealicense.com/licenses/mit/) license.
 ## Contributions
 * Contributions to this project won't be accepted as this is the reflection of the author's work hence the following questions and answers. Furthermore, forking or creating a pull request is acceptable.
 
+## License
+This project is under [MIT](https://choosealicense.com/licenses/mit/) license.
 
 ## Questions
 * For more questions or inquiries, please contact the author at [GitHub](https://github.com/mcramileux) or email kristineramilo21@gmail.com.
@@ -56,7 +64,6 @@ This project is under [MIT](https://choosealicense.com/licenses/mit/) license.
 - [JavaScript Async](https://www.w3schools.com/js/js_async.asp)
 - [Terminal Styling using Chalk](https://www.npmjs.com/package/chalk/v/4.1.2)
 - [Array.prototype.map()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
-- [Samantha Peterson's SQL challenge Employee Tracker 12](https://github.com/SamanthaPeterson/SQL-challenge-Employee-Tracker-12) for using .promise().
 
 ## Acknowledgements and Credits
 - Jacob Carver - weekly boot camp tutor
