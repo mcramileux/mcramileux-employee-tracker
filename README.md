@@ -47,11 +47,12 @@
 
 ## Links
 - Github Repository: https://github.com/mcramileux/mcramileux-employee-tracker
-- Google Drive Video: ---- ADD LINK HERE
+- Google Drive Video: https://drive.google.com/file/d/1HEDYpjxqGPc3hoEfb4dMOq5gd0Zv9_m1/view
 
 ## Usage
 - Run VS Code's terminal by typing all commands above to install the npm package dependencies
 - Once successful, run node server.js to do the task - view, add and update that you wish to do on the following menu.
+- For more information or guidelines on how to do the database, please watch the video [here](https://drive.google.com/file/d/1HEDYpjxqGPc3hoEfb4dMOq5gd0Zv9_m1/view).
 
 
 ## Screenshots 
