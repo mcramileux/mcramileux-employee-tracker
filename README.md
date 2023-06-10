@@ -5,6 +5,11 @@
 
 ## Description
 - This is a command-line application built from scratch to manage a company's employee database, using Node.js, Inquirer, and MySQL.
+  
+- The user can do the following:
+  - View: All Departments, All Roles, and View Employees
+  - Add: Department, Role and Employee
+  - Update: Employee's Role
 
 ## Table of Contents
 - [McRAMILEUX's Employee Tracker](#mcramileuxs-employee-tracker)
@@ -30,10 +35,11 @@
 * Screencastify
 
 ## Installation
-- The following are the installation packages needed to start the company's database to work before anything else:
+- Navigate to this [repository](https://github.com/mcramileux/mcramileux-employee-tracker)
+- Open your terminal on your local machine and clone the repository.
+- The following are the installation npm packages needed to start the company's database to work  before anything else:
   - npm init -y
   - npm install && npm start
-  - node server.js
   - npm i inquirer@8.2.4
   - npm i mysql2
   - npm i chalk@4.1.2
@@ -44,6 +50,9 @@
 - Google Drive Video: ---- ADD LINK HERE
 
 ## Usage
+- Run VS Code's terminal by typing all commands above to install the npm package dependencies
+- Once successful, run node server.js to do the task - view, add and update that you wish to do on the following menu.
+
 
 ## Screenshots 
 - ---- ADD PHOTOS HERE
